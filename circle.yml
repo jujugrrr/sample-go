@@ -1,0 +1,6 @@
+dependencies:
+  pre:
+    - go get -u github.com/golang/lint/golint
+test:
+  post:
+    - mv sample-go ${CIRCLE_ARTIFACTS}/
