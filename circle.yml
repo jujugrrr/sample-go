@@ -9,7 +9,4 @@ deployment:
   master:
     branch: master
     commands:
-      - pip install awscli
-      - aws s3 cp ${CIRCLE_ARTIFACTS}/sample-go s3://circleci-samplego/sample-go --acl 'public-read'
-      # Deploy to the servers 
-      - ./build/deploy_master.sh
+      - bash -x ./build/deploy_master.sh
